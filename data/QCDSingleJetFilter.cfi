@@ -1,0 +1,6 @@
+module QCDSingleJetFilter=QCDSingleJetFilter{
+        InputTag TriggerJetCollectionA= midPointCone7CaloJets
+	InputTag TriggerJetCollectionB= Fastjet6CaloJets
+        double MinPt=3000
+        double PreScale=1
+}

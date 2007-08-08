@@ -1,0 +1,23 @@
+block qcdJetFilterStreamHiEventSelection = {
+	untracked PSet SelectEvents = {
+	  vstring SelectEvents = {
+		"qcdJetFilterStreamHiPath"
+		}
+	}
+}
+
+block qcdJetFilterStreamMedEventSelection = {
+	untracked PSet SelectEvents = {
+	  vstring SelectEvents = {
+		"qcdJetFilterStreamMedPath"
+		}
+	}
+}
+
+block qcdJetFilterStreamLoEventSelection = {
+	untracked PSet SelectEvents = {
+	  vstring SelectEvents = {
+		"qcdJetFilterStreamLoPath"
+		}
+	}
+}

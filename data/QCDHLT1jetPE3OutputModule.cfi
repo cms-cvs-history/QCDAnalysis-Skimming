@@ -1,0 +1,13 @@
+include "Configuration/EventContent/data/EventContent.cff"
+include "QCDAnalysis/Skimming/data/QCDHLT1jetPE3EventContent.cff"
+
+module QCDHLT1jetPE3OutputModule = PoolOutputModule {
+  untracked string fileName = "QCDHLT1jetPE3.root"
+  using AODSIMEventContent
+  #using QCDHLT1jetPE3EventContent
+  using QCDHLT1jetPE3EventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "QCDHLT1jetPE3"
+  }
+}

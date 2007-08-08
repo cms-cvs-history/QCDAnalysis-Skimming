@@ -1,0 +1,13 @@
+# Can insert block to customize what goes inside root file on top of AOD/RECO
+block QCDHLT1jetPE1EventContent = {
+  untracked vstring outputCommands = {
+  }
+}
+
+block QCDHLT1jetPE1EventSelection = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "QCDHLT1jetPE1Skimpath"
+    }
+  }
+}

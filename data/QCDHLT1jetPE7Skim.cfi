@@ -1,0 +1,10 @@
+# 
+# Module for Jet trigger skim -- HLT1jetPE7 trigger
+#
+
+module QCDHLT1jetPE7Trigger = HLTHighLevel {
+       InputTag TriggerResultsTag = TriggerResults
+       bool byName = true
+       bool andOr = true
+       vstring HLTPaths = {"HLT1jetPE7"}
+}

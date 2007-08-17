@@ -1,0 +1,42 @@
+include "HLTrigger/Muon/data/PathDiMuon_2x1033_NoIso.cff"
+
+module diMuonsNoIsoL2PreFiltered = HLTMuonPreFilter {
+      InputTag CandTag = hltL2MuonCandidates
+
+      int32 MinN = 2
+      double MaxEta = 2.5
+      #int32 MinNhits = 4
+      int32 MinNhits = 0
+      double MaxDr = 9999.
+      double MaxDz = 9999.
+      double MinPt = 3.
+      double NSigmaPt = 3.9
+}
+
+module diMuonsNoIsoL3PreFiltered = HLTMuonPreFilter {
+      InputTag CandTag = hltL3MuonCandidates
+
+      int32 MinN = 2
+      double MaxEta = 2.5
+      #int32 MinNhits = 5
+      int32 MinNhits = 0
+      double MaxDr = 0.02
+      double MaxDz = 9999.
+      double MinPt = 3.
+      double NSigmaPt = 2.2
+}
+
+#module diMuonsNoIsoL3PreFiltered = DiMuonNoIsoL3PreFiltered from "HLTrigger/Muon/data/PathDiMuon_2x1033_NoIso.cff"
+#module diMuonsNoIsoL2PreFiltered = DiMuonNoIsoL2PreFiltered from "HLTrigger/Muon/data/PathDiMuon_2x1033_NoIso.cff"
+#replace diMuonsNoIsoL3PreFiltered.MinPt=3
+#replace diMuonsNoIsoL2PreFiltered.MinPt=3
+
+path diMuonsNoIsoPath = { 
+    #L1 muon
+          prescaleDiMuonNoIso & l1muonreco & DiMuonNoIsoLevel1Seed & DiMuonNoIsoL1Filtered
+    #L2 muon
+          & l2muonreco & diMuonsNoIsoL2PreFiltered
+    #L3 muon
+          & l3muonreco & diMuonsNoIsoL3PreFiltered
+}
+

@@ -1,0 +1,17 @@
+block diMounsEventContent = {
+   untracked vstring outputCommands = {
+     "keep *_genParticleCandidates_*_*",
+     "keep *_ctfWithMaterialTracks_*_*",
+     "keep *_globalMuons_*_*",
+     "keep edmTriggerResults_*_*_*",
+     "keep *_l1extraParticles_*_*"
+   }
+}
+
+block diMounsEventSelection  = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "diMuonsNoIsoPath"
+    }
+  }
+}

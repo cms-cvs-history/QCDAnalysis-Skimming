@@ -1,0 +1,21 @@
+include "RecoJets/Configuration/data/RecoJets_EventContent.cff"
+
+block jetEventsEventContent = {
+  untracked vstring outputCommands = {
+    "keep *_genParticleCandidates_*_*",
+    "keep *_ctfWithMaterialTracks_*_*",
+    "keep *_globalMuons_*_*",
+    "keep edmTriggerResults_*_*_*",
+    "keep *_l1extraParticles_*_*"
+   }
+}
+
+replace jetEventsEventContent.outputCommands += RecoJetsAOD.outputCommands
+
+block jetEventsEventSelection  = {
+  untracked PSet SelectEvents = {
+    vstring SelectEvents = {
+      "jetEventsPath"
+    }
+  }
+}

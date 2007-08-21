@@ -6,13 +6,22 @@ process CSA07UESkimPaths = {
 
   source = PoolSource {
         untracked vstring fileNames = {
-#              "file:/tmp/kkotov/lxplus201/qcd_160pre8.root",
-              "file:/tmp/kkotov/lxplus202/qcd_160pre8.root"
-#              "file:/tmp/kkotov/lxplus203/qcd_160pre8.root",
-#              "file:/tmp/kkotov/lxplus204/qcd_160pre8.root",
-#              "file:/tmp/kkotov/lxplus205/qcd_160pre8.root"
+              "file:/tmp/kkotov/lxplus201/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus202/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus203/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus204/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus205/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus206/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus207/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus208/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus209/_dy_160pre8.root",
+              "file:/tmp/kkotov/lxplus210/_dy_160pre8.root"
         }
   }
+  include "HLTrigger/Configuration/data/common/HLTSetup.cff"
+  path triggerEmulation = {hltBegin}
+
+  include "HLTrigger/Configuration/data/main/Muon.cff"
 
   include "SimGeneral/HepPDTESSource/data/pythiapdt.cfi"
   include "PhysicsTools/HepMCCandAlgos/data/genParticleCandidatesFast.cfi"
@@ -23,6 +32,8 @@ process CSA07UESkimPaths = {
 
   include "QCDAnalysis/Skimming/data/softJetsPath.cff"
   include "QCDAnalysis/Skimming/data/softJetsOutputModule.cfi"
+
+  include "HLTrigger/Configuration/data/common/HLTEndpath.cff"
 
   endpath qcdStream = { diMuonOutputModule, softJetsOutputModule }
 }

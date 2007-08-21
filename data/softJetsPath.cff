@@ -1,0 +1,3 @@
+include "QCDAnalysis/Skimming/data/softJetsSkim.cff"
+
+path softJetsPath = { !muonTrigger & !electronTrigger & !photonTrigger }

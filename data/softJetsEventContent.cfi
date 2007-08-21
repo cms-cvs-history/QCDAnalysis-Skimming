@@ -1,6 +1,6 @@
 include "RecoJets/Configuration/data/RecoJets_EventContent.cff"
 
-block jetEventsEventContent = {
+block softJetsEventContent = {
   untracked vstring outputCommands = {
     "keep *_genParticleCandidates_*_*",
     "keep *_ctfWithMaterialTracks_*_*",
@@ -10,12 +10,15 @@ block jetEventsEventContent = {
    }
 }
 
-replace jetEventsEventContent.outputCommands += RecoJetsAOD.outputCommands
+replace softJetsEventContent.outputCommands += RecoJetsAOD.outputCommands
 
-block jetEventsEventSelection  = {
+#include "Configuration/EventContent/data/EventContent.cff"
+#replace softJetsEventContent.outputCommands += AODSIMEventContent.outputCommands
+
+block softJetsEventSelection  = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "jetEventsPath"
+      "softJetsPath"
     }
   }
 }

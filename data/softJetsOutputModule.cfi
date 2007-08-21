@@ -1,0 +1,11 @@
+include "QCDAnalysis/Skimming/data/softJetsEventContent.cfi"
+
+module softJetsOutputModule = PoolOutputModule {
+  untracked string fileName = "softJets.root"
+  using softJetsEventContent
+  using softJetsEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "softJets"
+  }
+}

@@ -1,4 +1,4 @@
-block diMounsEventContent = {
+block diMuonEventContent = {
    untracked vstring outputCommands = {
      "keep *_genParticleCandidates_*_*",
      "keep *_ctfWithMaterialTracks_*_*",
@@ -8,10 +8,13 @@ block diMounsEventContent = {
    }
 }
 
-block diMounsEventSelection  = {
+#include "Configuration/EventContent/data/EventContent.cff"
+#replace diMuonEventContent.outputCommands += AODSIMEventContent.outputCommands
+
+block diMuonEventSelection  = {
   untracked PSet SelectEvents = {
     vstring SelectEvents = {
-      "diMuonsNoIsoPath"
+      "diMuonPath"
     }
   }
 }

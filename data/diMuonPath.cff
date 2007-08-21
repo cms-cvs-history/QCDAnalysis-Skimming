@@ -1,0 +1,3 @@
+include "QCDAnalysis/Skimming/data/diMuonSkim.cfi"
+
+path diMuonPath = { diMuonTrigger }

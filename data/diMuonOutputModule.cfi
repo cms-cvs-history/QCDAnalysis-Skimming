@@ -1,0 +1,11 @@
+include "QCDAnalysis/Skimming/data/diMuonEventContent.cfi"
+
+module diMuonOutputModule = PoolOutputModule {
+  untracked string fileName = "diMuons.root"
+  using diMuonEventContent
+  using diMuonEventSelection
+  untracked PSet datasets = {
+    untracked string dataTier = "USER"
+    untracked string filterName = "diMuons"
+  }
+}

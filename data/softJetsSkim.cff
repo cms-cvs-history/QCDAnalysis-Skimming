@@ -1,0 +1,26 @@
+###################################################################################
+#
+# Modules for soft Jet trigger skim. Designed for CSA07 only.
+# Should be used in veto mode and kill dominant samples of other physics
+#
+
+module muonTrigger = HLTHighLevel {
+       InputTag TriggerResultsTag = TriggerResults
+       bool byName = true
+       bool andOr = true
+       vstring HLTPaths = {"HLT1MuonNonIso"}
+}
+
+module electronTrigger = HLTHighLevel {
+       InputTag TriggerResultsTag = TriggerResults
+       bool byName = true
+       bool andOr = true
+       vstring HLTPaths = {"HLT1Electron"}   # could be "HLT1ElectronRelaxed"
+}
+
+module photonTrigger = HLTHighLevel {
+       InputTag TriggerResultsTag = TriggerResults
+       bool byName = true
+       bool andOr = true
+       vstring HLTPaths = {"HLT1Photon"}     # could be "HLT1PhotonRelaxed"
+}

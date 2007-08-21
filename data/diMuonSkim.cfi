@@ -1,0 +1,11 @@
+###################################################################################
+#
+# Modules for soft di-muon trigger skim.
+#
+
+module diMuonTrigger = HLTHighLevel {
+       InputTag TriggerResultsTag = TriggerResults
+       bool byName = true
+       bool andOr = true
+       vstring HLTPaths = {"HLT2MuonNonIso"}
+}

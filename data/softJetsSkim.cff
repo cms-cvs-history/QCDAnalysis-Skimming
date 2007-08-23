@@ -8,7 +8,6 @@ module singleJetTrigger=QCDSingleJetFilter {
         InputTag TriggerJetCollectionA= midPointCone7CaloJets
 	InputTag TriggerJetCollectionB= midPointCone7CaloJets
         double MinPt=20
-        double PreScale=1
 }
 
 module muonTrigger = HLTHighLevel {

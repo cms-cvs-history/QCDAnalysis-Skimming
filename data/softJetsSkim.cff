@@ -4,23 +4,30 @@
 # Should be used in veto mode and kill dominant samples of other physics
 #
 
+module singleJetTrigger=QCDSingleJetFilter {
+        InputTag TriggerJetCollectionA= midPointCone7CaloJets
+	InputTag TriggerJetCollectionB= midPointCone7CaloJets
+        double MinPt=20
+        double PreScale=1
+}
+
 module muonTrigger = HLTHighLevel {
-       InputTag TriggerResultsTag = TriggerResults
+       InputTag TriggerResultsTag = TriggerResults::HLT
        bool byName = true
        bool andOr = true
        vstring HLTPaths = {"HLT1MuonNonIso"}
 }
 
 module electronTrigger = HLTHighLevel {
-       InputTag TriggerResultsTag = TriggerResults
+       InputTag TriggerResultsTag = TriggerResults::HLT
        bool byName = true
        bool andOr = true
-       vstring HLTPaths = {"HLT1Electron"}   # could be "HLT1ElectronRelaxed"
+       vstring HLTPaths = {"HLT1ElectronRelaxed"}   # could be "HLT1Electron"
 }
 
 module photonTrigger = HLTHighLevel {
-       InputTag TriggerResultsTag = TriggerResults
+       InputTag TriggerResultsTag = TriggerResults::HLT
        bool byName = true
        bool andOr = true
-       vstring HLTPaths = {"HLT1Photon"}     # could be "HLT1PhotonRelaxed"
+       vstring HLTPaths = {"HLT1PhotonRelaxed"}     # could be "HLT1Photon"
 }

@@ -7,7 +7,6 @@
         untracked PSet dataset1 = {
             untracked string dataTier = "USER"
 	    untracked string filterName = "qcdJetFilterStreamLoPath"
-	    untracked string filterName = "JetMET1jet"
 	}
     }
   }

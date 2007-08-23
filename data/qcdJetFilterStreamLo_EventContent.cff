@@ -2,7 +2,8 @@
 block qcdJetFilterStreamLoEventSelection = {
 	untracked PSet SelectEvents = {
 	  vstring SelectEvents = {
-		"qcdJetFilterStreamLoPath"
+		"qcdJetFilterStreamLoPath",
+	        "HLT1jet"
 		}
 	}
 }

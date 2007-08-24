@@ -5,10 +5,8 @@ include "Configuration/EventContent/data/EventContent.cff"
     using AODSIMEventContent
     untracked string fileName = "qcdJetFilterStreamHi.root"
     using qcdJetFilterStreamHiEventSelection
-    untracked PSet datasets ={
-        untracked PSet dataset1 = {
+        untracked PSet dataset = {
             untracked string dataTier = "USER"
 	    untracked string filterName = "qcdJetFilterStreamHiPath"
-	}
     }
   }

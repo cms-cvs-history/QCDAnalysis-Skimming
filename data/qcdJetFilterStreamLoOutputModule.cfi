@@ -3,10 +3,8 @@
     using AODSIMEventContent
     untracked string fileName = "qcdJetFilterStreamLo.root"
     using qcdJetFilterStreamLoEventSelection
-    untracked PSet datasets ={
-        untracked PSet dataset1 = {
+        untracked PSet dataset = {
             untracked string dataTier = "USER"
 	    untracked string filterName = "qcdJetFilterStreamLoPath"
-	}
-    }
+      }
   }

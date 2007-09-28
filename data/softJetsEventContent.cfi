@@ -2,7 +2,7 @@ include "RecoJets/Configuration/data/RecoJets_EventContent.cff"
 
 block softJetsEventContent = {
   untracked vstring outputCommands = {
-    "keep *_genParticleCandidates_*_*",
+#    "keep *_genParticleCandidates_*_*",
     "keep *_ctfWithMaterialTracks_*_*",
     "keep *_globalMuons_*_*",
     "keep edmTriggerResults_*_*_*",
@@ -11,6 +11,9 @@ block softJetsEventContent = {
 }
 
 replace softJetsEventContent.outputCommands += RecoJetsAOD.outputCommands
+
+include "SimG4Core/Configuration/data/SimG4Core_EventContent.cff"
+replace softJetsEventContent.outputCommands += SimG4CoreAOD.outputCommands
 
 #include "Configuration/EventContent/data/EventContent.cff"
 #replace softJetsEventContent.outputCommands += AODSIMEventContent.outputCommands

@@ -1,3 +1,4 @@
+include "QCDAnalysis/Skimming/data/qcdJetFilterStreamHi_EventContent.cff"
   module qcdJetFilterStreamLoOutputModule = PoolOutputModule
   {
     using AODSIMEventContent

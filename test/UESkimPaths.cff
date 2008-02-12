@@ -10,8 +10,8 @@ process CSA07UESkimPaths = {
   }
 
   include "SimGeneral/HepPDTESSource/data/pythiapdt.cfi"
-  include "PhysicsTools/HepMCCandAlgos/data/genParticleCandidatesFast.cfi"
-  path genParticles = { genParticleCandidates }
+  include "PhysicsTools/HepMCCandAlgos/data/genParticles.cfi"
+  path genParticlesPath = { genParticles }
 
   include "QCDAnalysis/Skimming/data/diMuonPath.cff"
   include "QCDAnalysis/Skimming/data/diMuonOutputModule.cfi"

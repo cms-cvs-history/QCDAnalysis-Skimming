@@ -2,7 +2,7 @@ include "RecoJets/Configuration/data/RecoJets_EventContent.cff"
 
 block softJetsEventContent = {
   untracked vstring outputCommands = {
-#    "keep *_genParticleCandidates_*_*",
+#    "keep *_genParticles_*_*",
     "keep *_ctfWithMaterialTracks_*_*",
     "keep *_globalMuons_*_*",
     "keep edmTriggerResults_*_*_*",

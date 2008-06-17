@@ -1,8 +1,0 @@
-module qcdSingleJetFilterHi=qcdSingleJetFilter from "QCDAnalysis/Skimming/data/qcdSingleJetFilter.cfi"
-replace qcdSingleJetFilterHi.MinPt = 1000
-
-module qcdSingleJetFilterMed=qcdSingleJetFilter from "QCDAnalysis/Skimming/data/qcdSingleJetFilter.cfi"
-replace qcdSingleJetFilterMed.MinPt = 500
-
-module qcdSingleJetFilterLo=qcdSingleJetFilter from "QCDAnalysis/Skimming/data/qcdSingleJetFilter.cfi"
-replace qcdSingleJetFilterLo.MinPt = 200

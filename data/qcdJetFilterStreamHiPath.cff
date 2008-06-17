@@ -1,3 +1,0 @@
-include "QCDAnalysis/Skimming/data/qcdJetFilterStreamHiSkim.cff"
-
-path qcdJetFilterStreamHiPath = { qcdSingleJetFilterStreamHi }

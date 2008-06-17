@@ -1,5 +1,0 @@
-block qcdSingleJetFilterRandSeeds = {
-	untracked uint32 qcdSingleJetFilterHi=9821
-        untracked uint32 qcdSingleJetFilterMed=14821
-        untracked uint32 qcdSingleJetFilterLo=3214
-}

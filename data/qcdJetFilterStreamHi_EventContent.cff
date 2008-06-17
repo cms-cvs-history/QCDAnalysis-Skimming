@@ -1,8 +1,0 @@
-block qcdJetFilterStreamHiEventSelection = {
-	untracked PSet SelectEvents = {
-	  vstring SelectEvents = {
-		"qcdJetFilterStreamHiPath"
-		}
-	}
-}
-

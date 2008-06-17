@@ -1,3 +1,0 @@
-include "QCDAnalysis/Skimming/data/QCDHLT1jetPE3Skim.cfi"
-
-path QCDHLT1jetPE3Skimpath = { QCDHLT1jetPE3Trigger }

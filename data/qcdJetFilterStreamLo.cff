@@ -1,2 +1,0 @@
-
-sequence qcdJetFilterStreamLo={!qcdSingleJetFilterHi,!qcdSingleJetFilterMed,qcdSingleJetFilterLo}

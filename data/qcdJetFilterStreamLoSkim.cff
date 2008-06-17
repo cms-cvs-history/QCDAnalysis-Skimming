@@ -1,9 +1,0 @@
-
-
-module qcdSingleJetFilterLo=QCDSingleJetFilter{
-        InputTag TriggerJetCollectionA= midPointCone7CaloJets
-        InputTag TriggerJetCollectionB= fastjet6CaloJets
-        double MinPt=140
-# 140 GeV uncalibrated correspond appr. to 200 GeV of HLT scale, to be tested
-#        double MinPt=200
-}

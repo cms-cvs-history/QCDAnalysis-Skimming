@@ -14,19 +14,19 @@ module muonTrigger = HLTHighLevel {
        InputTag TriggerResultsTag = TriggerResults::HLT
        bool byName = true
        bool andOr = true
-       vstring HLTPaths = {"HLT1MuonNonIso"}
+       vstring HLTPaths = {"HLT_Mu15_L1Mu7"}
 }
 
 module electronTrigger = HLTHighLevel {
        InputTag TriggerResultsTag = TriggerResults::HLT
        bool byName = true
        bool andOr = true
-       vstring HLTPaths = {"HLT1ElectronRelaxed"}   # could be "HLT1Electron"
+       vstring HLTPaths = {"HLT_IsoEle18_L1R"}   # could be "HLT_IsoEle15_L1I"
 }
 
 module photonTrigger = HLTHighLevel {
        InputTag TriggerResultsTag = TriggerResults::HLT
        bool byName = true
        bool andOr = true
-       vstring HLTPaths = {"HLT1PhotonRelaxed"}     # could be "HLT1Photon"
+       vstring HLTPaths = {"HLT_IsoPhoton40_L1R"}     # could be "HLT_IsoPhoton30_L1I"
 }

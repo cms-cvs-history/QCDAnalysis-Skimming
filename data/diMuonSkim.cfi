@@ -7,5 +7,5 @@ module diMuonTrigger = HLTHighLevel {
        InputTag TriggerResultsTag = TriggerResults::HLT
        bool byName = true
        bool andOr = true
-       vstring HLTPaths = {"HLT2MuonNonIso"}
+       vstring HLTPaths = {"HLT_DoubleMu3"}
 }
